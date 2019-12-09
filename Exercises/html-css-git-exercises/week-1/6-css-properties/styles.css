@@ -2,11 +2,20 @@
 a {
   color: red;
   font-weight: bold;
+  text-decoration: none;
 }
 .message__time {
-  font-size: 0.9 rem;
+  font-size: 0.9rem;
 }
 
-.message__time {
+.message--unread {
   border-left: 3px solid blue;
+}
+
+.messages .message:first-child {
+  opacity: 0.5;
+}
+
+.message {
+  line-height: 35px;
 }
