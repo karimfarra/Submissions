@@ -1,1 +1,12 @@
 /* Add your CSS code below */
+a {
+  color: red;
+  font-weight: bold;
+}
+.message__time {
+  font-size: 0.9 rem;
+}
+
+.message__time {
+  border-left: 3px solid blue;
+}
