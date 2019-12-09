@@ -1,6 +1,12 @@
 /* Try different box model properties below */
 .pages__page {
-  border: 1px solid #4491db;
   border-radius: 4px;
   background: #fff;
+  padding: 2px;
+  margin: 5px 2px;
+}
+
+.countries li {
+  padding: 10px;
+  margin-bottom: 10px;
 }
