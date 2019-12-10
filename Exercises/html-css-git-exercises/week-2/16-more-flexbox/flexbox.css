@@ -3,3 +3,30 @@
 }
 
 /* Add your own CSS code below */
+
+.countries--first {
+  align-items: flex-end;
+}
+
+.countries--second {
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+.countries--third {
+  align-items: flex-start;
+}
+
+.countries--third .country.country--brazil {
+  align-self: flex-end;
+}
+.countries--fourth .country .country--crotia {
+  align-self: center;
+}
+
+.countries--fourth {
+  flex-direction: column;
+
+  align-items: flex-end;
+  align-content: center;
+}
