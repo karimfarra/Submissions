@@ -1,0 +1,46 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+main {
+  display: grid;
+  width: 85%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main gallery gallery"
+    "block sub other"
+    ". footer .";
+}
+
+.main-menu {
+  grid-area: main;
+}
+
+.gallery {
+  grid-area: gallery;
+}
+
+.subscription {
+  grid-area: sub;
+}
+
+.otherservices {
+  grid-area: other;
+}
+
+header {
+  grid-area: header;
+  background: url(https://scx1.b-cdn.net/csz/news/800/2019/nasamoonrock.jpg)
+    no-repeat;
+}
+
+footer {
+  grid-area: footer;
+}
+
+nav {
+  grid-area: nav;
+}
