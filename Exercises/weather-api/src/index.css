@@ -4,9 +4,68 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  background-color: #9ccef4;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  background-color: #759eda;
+  display: flex;
+  padding: 20px;
+}
+.buttonxd {
+  background-color: #5879c7;
+  border: none;
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.currentWeatherContainer {
+  padding: 25px;
+  display: flex;
+  background-color: #9ccef4;
+  flex-direction: column;
+  align-items: center;
+}
+.tempreature {
+  font-size: 10px;
+}
+.description {
+  color: white;
+}
+.Humidity-and-pressure {
+  font-size: 10px;
+  flex-direction: row;
+  font-family: ;
+}
+#type {
+  background-color: #759eda;
+  border: none;
+}
+.currentWeatherContainer img {
+  width: 160px;
+  height: 160px;
+}
+
+.hourly-weather {
+  display: flex;
+  background-color: #9ccef4;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto;
+  font-size: 12px;
+}
+
+.hourly-weather img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.hourly-weather div {
+  text-align: center;
 }
