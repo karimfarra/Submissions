@@ -3,7 +3,7 @@ import Hourly from "./hourly";
 import Search from "./Search";
 import Now from "./now";
 import "./index.css";
-import FakeWeather from "./data/FakeWeather.json";
+//import FakeWeather from "./data/FakeWeather.json";
 import storm from "./img/weather-icons/storm.svg";
 import clear from "./img/weather-icons/clear.svg";
 import fog from "./img/weather-icons/fog.svg";
@@ -18,8 +18,21 @@ import partlycloudy from "./img/weather-icons/partlycloudy.svg";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      FakeWeather: null
+    };
   }
+
+  async componentDidMount() {
+    let response = await fetch(
+      "http://api.openweathermap.org/data/2.5/forecast?q=london&cnt=8&appid=015789ae0d61ff7072a135396a0007f3"
+    );
+    let result = await response.json();
+    this.setState({
+      FakeWeather: result
+    });
+  }
+
   getWeatherIcon = id => {
     if (id === 800) {
       return clear;
@@ -47,7 +60,7 @@ class App extends Component {
     }
   };
   render() {
-    return (
+    return this.state.FakeWeather === null ? null : (
       <>
         <header className="header">
           <Search />
@@ -55,13 +68,15 @@ class App extends Component {
 
         <main>
           <Now
-            images={this.getWeatherIcon(FakeWeather.list[0].weather[0].id)}
-            descriptions={FakeWeather.list[0].weather[0].description}
-            temperature={FakeWeather.list[0].main.temp}
-            Humidity={FakeWeather.list[0].main.humidity}
-            pressure={FakeWeather.list[0].main.pressure}
+            images={this.getWeatherIcon(
+              this.state.FakeWeather.list[0].weather[0].id
+            )}
+            descriptions={this.state.FakeWeather.list[0].weather[0].description}
+            temperature={this.state.FakeWeather.list[0].main.temp}
+            Humidity={this.state.FakeWeather.list[0].main.humidity}
+            pressure={this.state.FakeWeather.list[0].main.pressure}
           />
-          <Hourly />
+          <Hourly FakeWeather={this.state.FakeWeather} />
         </main>
       </>
     );

@@ -4,7 +4,7 @@ import rain from "./img/weather-icons/rain.svg";
 import partlycloudy from "./img/weather-icons/partlycloudy.svg";
 import React, { Component } from "react";
 import Hour from "./hour";
-import FakeWeather from "./data/FakeWeather.json";
+//import this.props.FakeWeather from "./data/FakeWeather.json";
 import drizzle from "./img/weather-icons/drizzle.svg";
 import snow from "./img/weather-icons/snow.svg";
 import mostlycloudy from "./img/weather-icons/mostlycloudy.svg";
@@ -48,41 +48,55 @@ class Hourly extends Component {
       <>
         <div className="hourly-weather">
           <Hour
-            time={FakeWeather.list[1].dt_txt.split(" ")[1]}
-            temperature={FakeWeather.list[1].main.temp}
-            images={this.getWeatherIcon(FakeWeather.list[1].weather[0].id)}
+            time={this.props.FakeWeather.list[1].dt_txt.split(" ")[1]}
+            temperature={this.props.FakeWeather.list[1].main.temp}
+            images={this.getWeatherIcon(
+              this.props.FakeWeather.list[1].weather[0].id
+            )}
           />
 
           <Hour
-            time={FakeWeather.list[2].dt_txt.split(" ")[1]}
-            temperature={FakeWeather.list[2].main.temp}
-            images={this.getWeatherIcon(FakeWeather.list[2].weather[0].id)}
+            time={this.props.FakeWeather.list[2].dt_txt.split(" ")[1]}
+            temperature={this.props.FakeWeather.list[2].main.temp}
+            images={this.getWeatherIcon(
+              this.props.FakeWeather.list[2].weather[0].id
+            )}
           />
 
           <Hour
-            time={FakeWeather.list[3].dt_txt.split(" ")[1]}
-            temperature={FakeWeather.list[3].main.temp}
-            images={this.getWeatherIcon(FakeWeather.list[3].weather[0].id)}
+            time={this.props.FakeWeather.list[3].dt_txt.split(" ")[1]}
+            temperature={this.props.FakeWeather.list[3].main.temp}
+            images={this.getWeatherIcon(
+              this.props.FakeWeather.list[3].weather[0].id
+            )}
           />
           <Hour
-            time={FakeWeather.list[4].dt_txt.split(" ")[1]}
-            temperature={FakeWeather.list[4].main.temp}
-            images={this.getWeatherIcon(FakeWeather.list[4].weather[0].id)}
+            time={this.props.FakeWeather.list[4].dt_txt.split(" ")[1]}
+            temperature={this.props.FakeWeather.list[4].main.temp}
+            images={this.getWeatherIcon(
+              this.props.FakeWeather.list[4].weather[0].id
+            )}
           />
           <Hour
-            time={FakeWeather.list[5].dt_txt.split(" ")[1]}
-            temperature={FakeWeather.list[5].main.temp}
-            images={this.getWeatherIcon(FakeWeather.list[5].weather[0].id)}
+            time={this.props.FakeWeather.list[5].dt_txt.split(" ")[1]}
+            temperature={this.props.FakeWeather.list[5].main.temp}
+            images={this.getWeatherIcon(
+              this.props.FakeWeather.list[5].weather[0].id
+            )}
           />
           <Hour
-            time={FakeWeather.list[6].dt_txt.split(" ")[1]}
-            temperature={FakeWeather.list[6].main.temp}
-            images={this.getWeatherIcon(FakeWeather.list[6].weather[0].id)}
+            time={this.props.FakeWeather.list[6].dt_txt.split(" ")[1]}
+            temperature={this.props.FakeWeather.list[6].main.temp}
+            images={this.getWeatherIcon(
+              this.props.FakeWeather.list[6].weather[0].id
+            )}
           />
           <Hour
-            time={FakeWeather.list[7].dt_txt.split(" ")[1]}
-            temperature={FakeWeather.list[7].main.temp}
-            images={this.getWeatherIcon(FakeWeather.list[7].weather[0].id)}
+            time={this.props.FakeWeather.list[7].dt_txt.split(" ")[1]}
+            temperature={this.props.FakeWeather.list[7].main.temp}
+            images={this.getWeatherIcon(
+              this.props.FakeWeather.list[7].weather[0].id
+            )}
           />
         </div>
       </>
