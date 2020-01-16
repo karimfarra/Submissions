@@ -11,19 +11,21 @@ class Now extends Component {
       <>
         <div className="currentWeatherContainer">
           <div className="imageContainer">
-            <img src={storm} />
+            <img src={this.props.images} />
           </div>
-          <div className="description">
-            <p style={{ fontWeight: "bold" }}>overcast clouds</p>
+          <div className="descriptions">
+            <p style={{ fontWeight: "bold" }}>{this.props.descriptions}</p>
           </div>
-          <div className="tempreature">
+          <div className="temperature">
             <p>
-              <strong>Static data</strong>
+              <strong>{Math.round(this.props.temperature - 273.15)}</strong>
             </p>
           </div>
-          <div className="Humidity-and-pressure">
+          <div className="Humidity-Pressure">
             <p>
-              <b>Static data</b>
+              <b>
+                Humidity:{this.props.Humidity} Pressure:{this.props.pressure}
+              </b>
             </p>
           </div>
         </div>

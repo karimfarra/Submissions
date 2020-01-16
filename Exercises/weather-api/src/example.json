@@ -1,0 +1,17 @@
+{
+  "name": {
+    "first": "karim",
+    "last": "El-Farra"
+  },
+  "age": "21",
+  "projects": [
+    {
+      "name": "Weather-API",
+      "url": "xyz"
+    },
+    {
+      "name": "Community",
+      "url": "abc"
+    }
+  ]
+}
