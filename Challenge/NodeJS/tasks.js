@@ -32,10 +32,13 @@ function startApp(name) {
  * @returns {void}
  */
 function onDataReceived(text) {
+  console.log(`This is what i typed: ${text}`);
   if (text === "quit\n" || text === "exit\n") {
     quit();
   } else if (text === "hello\n") {
     hello();
+  } else if (text == "help\n") {
+    help();
   } else {
     unknownCommand(text);
   }
@@ -73,3 +76,7 @@ function quit() {
 
 // The following line starts the application
 startApp("Karim Farra");
+
+function help(help) {
+  console.log("Exit or Quit: Exits the program");
+}
