@@ -76,7 +76,7 @@ function quit() {
 
 // The following line starts the application
 startApp("Karim Farra");
-
+// This function gives you the the commands available
 function help(help) {
   console.log("Exit or Quit: Exits the program");
 }
