@@ -121,7 +121,15 @@ legend {
   margin-right: 10%;
 }
  .b1 {
-    color: brown; 
+    color:rgb(124, 192, 124); 
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 80px;
+    border: none;
+    background-color: rgb(226, 195, 195);
+    border-radius: 10%;
  }
+
+.azi {
+   height: 350px ;
+   width: 550px ;
+}
